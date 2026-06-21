@@ -1,0 +1,26 @@
+name: 'ArgoCD Deployment Trigger'
+
+on:
+  repository_dispatch:
+    types: [update-images]
+
+jobs:
+  update-helm-images:
+    runs-on: ubuntu-latest
+    environment: production # Manual Approval Gate
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+
+      - name: Update values.yaml
+        run: |
+          sed -i "s/tag: .*/tag: \"${{ github.event.client_payload.image_tag }}\"/g" carenest/values.yaml
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add carenest/values.yaml
+          git commit -m "Update image tags to ${{ github.event.client_payload.image_tag }}"
+          git push
