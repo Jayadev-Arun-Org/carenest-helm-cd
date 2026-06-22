@@ -124,7 +124,7 @@ resources:
 # ── MongoDB ───────────────────────────────────────────
 mongo:
   storageSize: 5Gi
-  storageClass: local-path  # leave empty for default
+  storageClass: default  # leave empty for default
 
 # ── Config (non-sensitive) ────────────────────────────
 config:
