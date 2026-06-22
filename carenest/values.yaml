@@ -8,11 +8,11 @@ environment: dev
 
 # ── Docker Images ─────────────────────────────────────
 images:
-  auth: jdcarenestnewacr.azurecr.io/auth:1ecc4cde8d79201e3715cf7d15fd44d2e2a5af17 # IMAGE_AUTH
-  appointment: jdcarenestnewacr.azurecr.io/appointment:1ecc4cde8d79201e3715cf7d15fd44d2e2a5af17 # IMAGE_APPOINTMENT
-  pharmacy: jdcarenestnewacr.azurecr.io/pharmacy:1ecc4cde8d79201e3715cf7d15fd44d2e2a5af17 # IMAGE_PHARMACY
-  notify: jdcarenestnewacr.azurecr.io/notify:1ecc4cde8d79201e3715cf7d15fd44d2e2a5af17 # IMAGE_NOTIFY
-  frontend: jdcarenestnewacr.azurecr.io/frontend:1ecc4cde8d79201e3715cf7d15fd44d2e2a5af17 # IMAGE_FRONTEND
+  auth: jdcarenestnewacr.azurecr.io/auth:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_AUTH
+  appointment: jdcarenestnewacr.azurecr.io/appointment:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_APPOINTMENT
+  pharmacy: jdcarenestnewacr.azurecr.io/pharmacy:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_PHARMACY
+  notify: jdcarenestnewacr.azurecr.io/notify:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_NOTIFY
+  frontend: jdcarenestnewacr.azurecr.io/frontend:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_FRONTEND
   mongo: mongo:7
   redis: redis:7-alpine
   haproxy: haproxytech/haproxy-alpine:2.9
