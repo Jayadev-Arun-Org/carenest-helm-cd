@@ -8,14 +8,12 @@ environment: dev
 
 # ── Docker Images ─────────────────────────────────────
 images:
+  ai: jdcarenestnewacr.azurecr.io/ai:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_AI
   auth: jdcarenestnewacr.azurecr.io/auth:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_AUTH
   appointment: jdcarenestnewacr.azurecr.io/appointment:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_APPOINTMENT
   pharmacy: jdcarenestnewacr.azurecr.io/pharmacy:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_PHARMACY
   notify: jdcarenestnewacr.azurecr.io/notify:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_NOTIFY
   frontend: jdcarenestnewacr.azurecr.io/frontend:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_FRONTEND
-  mongo: mongo:7
-  redis: redis:7-alpine
-  haproxy: haproxytech/haproxy-alpine:2.9
   pullPolicy: Always
 
 # ── Replicas ──────────────────────────────────────────
