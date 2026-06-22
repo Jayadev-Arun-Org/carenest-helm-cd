@@ -28,3 +28,13 @@ jobs:
           git add carenest/values.yaml
           git commit -m "Update image tags to ${{ github.event.client_payload.image_tag }}"
           git push
+
+      - name: Pipeline Status Notification
+        if: always()
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          fields: repo,message,commit,author,action,eventName,ref,workflow,job,took
+          text: 'ArgoCD Update Pipeline finished with status: ${{ job.status }}'
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
