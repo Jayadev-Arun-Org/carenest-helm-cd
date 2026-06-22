@@ -8,12 +8,12 @@ environment: dev
 
 # ── Docker Images ─────────────────────────────────────
 images:
-  ai: jdcarenestnewacr.azurecr.io/ai:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_AI
-  auth: jdcarenestnewacr.azurecr.io/auth:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_AUTH
-  appointment: jdcarenestnewacr.azurecr.io/appointment:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_APPOINTMENT
-  pharmacy: jdcarenestnewacr.azurecr.io/pharmacy:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_PHARMACY
-  notify: jdcarenestnewacr.azurecr.io/notify:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_NOTIFY
-  frontend: jdcarenestnewacr.azurecr.io/frontend:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_FRONTEND
+  ai: jdcarenestnewacr.azurecr.io/ai:70ca19d1ea8438e0394ff764bad7f8eb4f6f42ce # IMAGE_AI
+  auth: jdcarenestnewacr.azurecr.io/auth:70ca19d1ea8438e0394ff764bad7f8eb4f6f42ce # IMAGE_AUTH
+  appointment: jdcarenestnewacr.azurecr.io/appointment:70ca19d1ea8438e0394ff764bad7f8eb4f6f42ce # IMAGE_APPOINTMENT
+  pharmacy: jdcarenestnewacr.azurecr.io/pharmacy:70ca19d1ea8438e0394ff764bad7f8eb4f6f42ce # IMAGE_PHARMACY
+  notify: jdcarenestnewacr.azurecr.io/notify:70ca19d1ea8438e0394ff764bad7f8eb4f6f42ce # IMAGE_NOTIFY
+  frontend: jdcarenestnewacr.azurecr.io/frontend:70ca19d1ea8438e0394ff764bad7f8eb4f6f42ce # IMAGE_FRONTEND
   pullPolicy: Always
 
 # ── Replicas ──────────────────────────────────────────
