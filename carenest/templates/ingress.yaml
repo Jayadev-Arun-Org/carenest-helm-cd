@@ -1,0 +1,46 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: carenest-ingress
+  namespace: {{ .Values.namespace }}
+  annotations:
+    kubernetes.io/ingress.class: azure/application-gateway
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /api/auth
+            pathType: Prefix
+            backend:
+              service:
+                name: auth-service
+                port:
+                  number: {{ .Values.ports.auth }}
+          - path: /api/appointments
+            pathType: Prefix
+            backend:
+              service:
+                name: appointment-service
+                port:
+                  number: {{ .Values.ports.appointment }}
+          - path: /api/prescriptions
+            pathType: Prefix
+            backend:
+              service:
+                name: pharmacy-service
+                port:
+                  number: {{ .Values.ports.pharmacy }}
+          - path: /api/notifications
+            pathType: Prefix
+            backend:
+              service:
+                name: notify-service
+                port:
+                  number: {{ .Values.ports.notify }}
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend-service
+                port:
+                  number: {{ .Values.ports.frontend }}
