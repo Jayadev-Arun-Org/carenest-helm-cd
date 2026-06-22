@@ -15,7 +15,11 @@ jobs:
 
       - name: Update values.yaml
         run: |
-          sed -i "s/tag: .*/tag: \"${{ github.event.client_payload.image_tag }}\"/g" carenest/values.yaml
+          sed -i "s|.*# IMAGE_AUTH|  auth: jdcarenestnewacr.azurecr.io/auth:${{ github.event.client_payload.image_tag }} # IMAGE_AUTH|g" carenest/values.yaml
+          sed -i "s|.*# IMAGE_APPOINTMENT|  appointment: jdcarenestnewacr.azurecr.io/appointment:${{ github.event.client_payload.image_tag }} # IMAGE_APPOINTMENT|g" carenest/values.yaml
+          sed -i "s|.*# IMAGE_PHARMACY|  pharmacy: jdcarenestnewacr.azurecr.io/pharmacy:${{ github.event.client_payload.image_tag }} # IMAGE_PHARMACY|g" carenest/values.yaml
+          sed -i "s|.*# IMAGE_NOTIFY|  notify: jdcarenestnewacr.azurecr.io/notify:${{ github.event.client_payload.image_tag }} # IMAGE_NOTIFY|g" carenest/values.yaml
+          sed -i "s|.*# IMAGE_FRONTEND|  frontend: jdcarenestnewacr.azurecr.io/frontend:${{ github.event.client_payload.image_tag }} # IMAGE_FRONTEND|g" carenest/values.yaml
 
       - name: Commit and Push
         run: |

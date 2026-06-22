@@ -8,11 +8,11 @@ environment: dev
 
 # ── Docker Images ─────────────────────────────────────
 images:
-  auth: jayadevarun2003/carenest-auth
-  appointment: jayadevarun2003/carenest-appointment
-  pharmacy: jayadevarun2003/carenest-pharmacy
-  notify: jayadevarun2003/carenest-notify
-  frontend: jayadevarun2003/carenest-frontend
+  auth: jayadevarun2003/carenest-auth # IMAGE_AUTH
+  appointment: jayadevarun2003/carenest-appointment # IMAGE_APPOINTMENT
+  pharmacy: jayadevarun2003/carenest-pharmacy # IMAGE_PHARMACY
+  notify: jayadevarun2003/carenest-notify # IMAGE_NOTIFY
+  frontend: jayadevarun2003/carenest-frontend # IMAGE_FRONTEND
   mongo: mongo:7
   redis: redis:7-alpine
   haproxy: haproxytech/haproxy-alpine:2.9
