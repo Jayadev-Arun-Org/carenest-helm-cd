@@ -8,13 +8,13 @@ environment: dev
 
 # ── Docker Images ─────────────────────────────────────
 images:
-  ai: jdcarenestnewacr.azurecr.io/ai:c4355ff0ac0b8edea8e297a65eb9d97aed4fe0c4 # IMAGE_AI
-  aiops: jdcarenestnewacr.azurecr.io/aiops:c4355ff0ac0b8edea8e297a65eb9d97aed4fe0c4 # IMAGE_AIOPS
-  auth: jdcarenestnewacr.azurecr.io/auth:c4355ff0ac0b8edea8e297a65eb9d97aed4fe0c4 # IMAGE_AUTH
-  appointment: jdcarenestnewacr.azurecr.io/appointment:c4355ff0ac0b8edea8e297a65eb9d97aed4fe0c4 # IMAGE_APPOINTMENT
-  pharmacy: jdcarenestnewacr.azurecr.io/pharmacy:c4355ff0ac0b8edea8e297a65eb9d97aed4fe0c4 # IMAGE_PHARMACY
-  notify: jdcarenestnewacr.azurecr.io/notify:c4355ff0ac0b8edea8e297a65eb9d97aed4fe0c4 # IMAGE_NOTIFY
-  frontend: jdcarenestnewacr.azurecr.io/frontend:c4355ff0ac0b8edea8e297a65eb9d97aed4fe0c4 # IMAGE_FRONTEND
+  ai: jdcarenestnewacr.azurecr.io/ai:391d9a97a883b81f46a0506ee6a7f55d11538c68 # IMAGE_AI
+  aiops: jdcarenestnewacr.azurecr.io/aiops:391d9a97a883b81f46a0506ee6a7f55d11538c68 # IMAGE_AIOPS
+  auth: jdcarenestnewacr.azurecr.io/auth:391d9a97a883b81f46a0506ee6a7f55d11538c68 # IMAGE_AUTH
+  appointment: jdcarenestnewacr.azurecr.io/appointment:391d9a97a883b81f46a0506ee6a7f55d11538c68 # IMAGE_APPOINTMENT
+  pharmacy: jdcarenestnewacr.azurecr.io/pharmacy:391d9a97a883b81f46a0506ee6a7f55d11538c68 # IMAGE_PHARMACY
+  notify: jdcarenestnewacr.azurecr.io/notify:391d9a97a883b81f46a0506ee6a7f55d11538c68 # IMAGE_NOTIFY
+  frontend: jdcarenestnewacr.azurecr.io/frontend:391d9a97a883b81f46a0506ee6a7f55d11538c68 # IMAGE_FRONTEND
   pullPolicy: Always
 
 # ── Replicas ──────────────────────────────────────────
