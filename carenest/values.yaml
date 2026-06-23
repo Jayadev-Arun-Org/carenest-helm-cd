@@ -9,6 +9,7 @@ environment: dev
 # ── Docker Images ─────────────────────────────────────
 images:
   ai: jdcarenestnewacr.azurecr.io/ai:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_AI
+  aiops: jdcarenestnewacr.azurecr.io/aiops:latest # IMAGE_AIOPS
   auth: jdcarenestnewacr.azurecr.io/auth:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_AUTH
   appointment: jdcarenestnewacr.azurecr.io/appointment:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_APPOINTMENT
   pharmacy: jdcarenestnewacr.azurecr.io/pharmacy:cd9846be9139db244c76865395aa87c65104b6be # IMAGE_PHARMACY

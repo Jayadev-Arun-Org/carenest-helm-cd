@@ -16,6 +16,7 @@ jobs:
       - name: Update values.yaml
         run: |
           sed -i "s|.*# IMAGE_AI|  ai: jdcarenestnewacr.azurecr.io/ai:${{ github.event.client_payload.image_tag }} # IMAGE_AI|g" carenest/values.yaml
+          sed -i "s|.*# IMAGE_AIOPS|  aiops: jdcarenestnewacr.azurecr.io/aiops:${{ github.event.client_payload.image_tag }} # IMAGE_AIOPS|g" carenest/values.yaml
           sed -i "s|.*# IMAGE_AUTH|  auth: jdcarenestnewacr.azurecr.io/auth:${{ github.event.client_payload.image_tag }} # IMAGE_AUTH|g" carenest/values.yaml
           sed -i "s|.*# IMAGE_APPOINTMENT|  appointment: jdcarenestnewacr.azurecr.io/appointment:${{ github.event.client_payload.image_tag }} # IMAGE_APPOINTMENT|g" carenest/values.yaml
           sed -i "s|.*# IMAGE_PHARMACY|  pharmacy: jdcarenestnewacr.azurecr.io/pharmacy:${{ github.event.client_payload.image_tag }} # IMAGE_PHARMACY|g" carenest/values.yaml

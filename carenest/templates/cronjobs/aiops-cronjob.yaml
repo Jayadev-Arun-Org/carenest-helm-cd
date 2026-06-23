@@ -1,0 +1,53 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: aiops-agent
+  namespace: carenest-dev
+  labels:
+    app: aiops-agent
+spec:
+  schedule: "*/5 * * * *"
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 1
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          labels:
+            app: aiops-agent
+            azure.workload.identity/use: "true"
+        spec:
+          serviceAccountName: carenest-sa
+          restartPolicy: OnFailure
+          containers:
+          - name: aiops-agent
+            image: {{ .Values.images.aiops }}
+            imagePullPolicy: Always
+            env:
+            - name: LOG_ANALYTICS_WORKSPACE_ID
+              value: "7e1c6933-9daa-4775-ac75-cb2424da5f54"
+            - name: SMTP_SERVER
+              value: "smtp.gmail.com"
+            - name: SMTP_PORT
+              value: "587"
+            - name: SMTP_USERNAME
+              value: "jayadevarun03@gmail.com"
+            - name: ALERT_EMAIL_TO
+              value: "jayadevarun03@gmail.com"
+            - name: LANGFUSE_HOST
+              value: "https://cloud.langfuse.com"
+            envFrom:
+            - secretRef:
+                name: carenest-secrets
+            volumeMounts:
+            - name: secrets-store-inline
+              mountPath: "/mnt/secrets-store"
+              readOnly: true
+          volumes:
+          - name: secrets-store-inline
+            csi:
+              driver: secrets-store.csi.k8s.io
+              readOnly: true
+              volumeAttributes:
+                secretProviderClass: "jd-carenest-new-kv-secrets"
