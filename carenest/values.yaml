@@ -19,11 +19,11 @@ images:
 
 # ── Replicas ──────────────────────────────────────────
 replicas:
-  auth: 2
-  appointment: 2
-  pharmacy: 2
-  notify: 2
-  frontend: 2
+  auth: 1
+  appointment: 1
+  pharmacy: 1
+  notify: 1
+  frontend: 1
   redis: 1
 
 # ── Ports ─────────────────────────────────────────────
