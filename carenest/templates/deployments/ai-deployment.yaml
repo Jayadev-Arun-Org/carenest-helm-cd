@@ -30,11 +30,11 @@ spec:
         - containerPort: 3005
         resources:
           requests:
-            cpu: 10m
-            memory: 32Mi
-          limits:
             cpu: 50m
             memory: 64Mi
+          limits:
+            cpu: 200m
+            memory: 128Mi
         livenessProbe:
           httpGet:
             path: /health
@@ -71,4 +71,5 @@ spec:
         - name: ai-model-cache-vol
           persistentVolumeClaim:
             claimName: ai-model-cache
+
 

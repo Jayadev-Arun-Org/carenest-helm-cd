@@ -30,10 +30,10 @@ spec:
         - containerPort: 3001
         resources:
           requests:
-            cpu: 10m
-            memory: 32Mi
-          limits:
             cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 200m
             memory: 64Mi
         livenessProbe:
           httpGet:
@@ -66,5 +66,6 @@ spec:
             readOnly: true
             volumeAttributes:
               secretProviderClass: "jd-carenest-new-kv-secrets"
+
 
 
